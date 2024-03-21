@@ -5,12 +5,14 @@
 This is a project done under IET NITK where the goal is to enhance the brightness of low light image and then pass it to the super resolution model to enhance the visibility and clarity of the image and removing the noise such that the output image is much more clear and visibility pleasing and aesthetically appealing.
 ### Description
 
-Our proposed model begins by implementing a mechanism to determine whether the input image exhibits characteristics of low-light conditions. . Subsequently, we will develop a function capable of discerning whether the given image meets the criteria for low-light classification. Upon identification of a low-light image, we will employ the Zero DCE model to enhance its brightness.
+Our proposed model begins by implementing a mechanism to determine whether the input image exhibits characteristics of low-light conditions.Causes of low-light conditions can be due to insufficient or
+absent light source or uneven illumination caused by back-light and shadows. Subsequently, we will develop a function capable of discerning whether the given image meets the criteria for low-light classification. Upon identification of a low-light image, we will employ the Zero DCE model to enhance its brightness.
 
 Following the enhancement process through the Zero DCE model, the image will undergo further refinement using the Super Resolution model. This subsequent step aims to produce a substantially clearer and denoised version of the image, leveraging the sophisticated capabilities inherent to the Super Resolution model.
 
 In essence, our model is designed to automatically detect and address low-light scenarios in images, enhance their brightness using Zero DCE, and further refine them to achieve superior clarity and noise reduction through the Super Resolution model. This holistic approach ensures that images exhibiting low-light conditions are effectively processed to yield optimal visual outcomes.
 #### h4 Heading
+
 ##### h5 Heading
 ###### h6 Heading
 
