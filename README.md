@@ -34,8 +34,6 @@ Zero-Reference Deep Curve Estimation (Zero DCE) is a state-of-the-art method for
 
 The trained Super Resolution model achieves state-of-the-art performance on standard benchmark datasets, demonstrating significant improvements in image quality and resolution compared to baseline methods.
 
-##### Implementation
-
 We provide an implementation of the Zero DCE model in Python using TensorFlow/Keras. The code is available in the `code1.py` file. 
 
 To use the Zero DCE model, follow these steps:
@@ -43,7 +41,7 @@ To use the Zero DCE model, follow these steps:
 1. Follow code given in the code folder.
 2. Load your low-light images.
 3. Preprocess the images as required (e.g., resizing, normalization).
-4. Use the `zero_dce` function to brighten the images.
+4. Use the zero_dce function to brighten the images.
 5. Save or display the enhanced images.
 
 We provide an implementation of the Super Resolution model in Python using TensorFlow/Keras. The code is available in the `code2.py` file. 
@@ -53,7 +51,7 @@ To use the Super Resolution model, follow these steps:
 1. Follow code given in the code folder.
 2. Load your unclear,blurry images.
 3. Preprocess the images as required (e.g., resizing, normalization).
-4. Use the `super-resolution` function to enhance the images.
+4. Use the super-resolution function to enhance the images.
 5. Save or display the enhanced images.
 
 
