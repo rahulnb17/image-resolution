@@ -3,7 +3,7 @@
 # Image Super Resolution
 ## Motivation for the Project
 This is a project done under IET NITK where the goal is to enhance the brightness of low light image and then pass it to the super resolution model to enhance the visibility and clarity of the image and removing the noise such that the output image is much more clear and visibily pleasing and aesthetically appealing.
-### Description
+## Description
 
 Our proposed model begins by implementing a mechanism to determine whether the input image exhibits characteristics of low-light conditions.Causes of low-light conditions can be due to insufficient or
 absent light source or uneven illumination caused by back-light and shadows. Subsequently, we will develop a function capable of discerning whether the given image meets the criteria for low-light classification. Upon identification of a low-light image, we will employ the Zero DCE model to enhance its brightness.
@@ -11,7 +11,7 @@ absent light source or uneven illumination caused by back-light and shadows. Sub
 Following the enhancement process through the Zero DCE model, the image will undergo further refinement using the Super Resolution model. This subsequent step aims to produce a substantially clearer and denoised version of the image, leveraging the sophisticated capabilities inherent to the Super Resolution model.
 
 In essence, our model is designed to automatically detect and address low-light scenarios in images, enhance their brightness using Zero DCE, and further refine them to achieve superior clarity and noise reduction through the Super Resolution model. This holistic approach ensures that images exhibiting low-light conditions are effectively processed to yield optimal visual outcomes.
-#### Working
+## Working
 
 The Zero-Reference Deep Curve Estimation (Zero DCE) model is a state-of-the-art method in the field of image enhancement, particularly in addressing low-light conditions. Unlike traditional methods that rely on reference images or prior knowledge, the Zero DCE model operates without any reference input, hence the term "zero-reference."
 
@@ -25,16 +25,16 @@ The generator network within SR-GAN is tasked with learning a mapping function t
 
 One of the key strengths of SR-GAN lies in its ability to generate photo-realistic images with enhanced resolution, surpassing the capabilities of traditional interpolation-based methods. By harnessing the power of GANs, SR-GAN is able to produce sharp, detailed, and visually appealing images that closely resemble their high-resolution counterparts.
 
-#### Implementation
+## Implementation
 
 ##### Zero-DCE Implementation
 
-# Code snippet for implementing the Zero-DCE model
+##### Code snippet for implementing the Zero-DCE model
 import tensorflow as tf
 from tensorflow.keras.layers import Conv2D, Activation, BatchNormalization
 from tensorflow.keras.models import Sequential
 
-# Define the Zero-DCE model architecture
+##### Define the Zero-DCE model architecture
 def create_zero_dce_model():
     model = Sequential([
         Conv2D(64, (3, 3), padding='same', input_shape=(256, 256, 3)),
@@ -49,15 +49,17 @@ def create_zero_dce_model():
     ])
     return model
 
-# Instantiate the Zero-DCE model
+##### Instantiate the Zero-DCE model
 zero_dce_model = create_zero_dce_model()
-##### Supewr-Resolution Implementation
-# Code snippet for implementing the Super Resolution model using CNN
+##### Super-Resolution Implementation
+##### Code snippet for implementing the Super Resolution model using CNN
 import tensorflow as tf
+
 from tensorflow.keras.layers import Conv2D, Activation, BatchNormalization, UpSampling2D
+
 from tensorflow.keras.models import Sequential
 
-# Define the Super Resolution model architecture
+##### Define the Super Resolution model architecture
 def create_super_resolution_model():
     model = Sequential([
         Conv2D(64, (3, 3), padding='same', input_shape=(256, 256, 3)),
@@ -76,7 +78,7 @@ def create_super_resolution_model():
 # Instantiate the Super Resolution model
 super_resolution_model = create_super_resolution_model()
 
-#### Conclusion
+## Conclusion
 
 Together, these models contribute to advancing the field of image processing and computer vision, offering practical solutions for improving image quality in real-world scenarios. By leveraging deep learning techniques, they demonstrate the potential for significant enhancements in various domains, including surveillance, photography, medical imaging, and more.
 
