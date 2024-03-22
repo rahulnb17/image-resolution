@@ -25,12 +25,72 @@ The generator network within SR-GAN is tasked with learning a mapping function t
 
 One of the key strengths of SR-GAN lies in its ability to generate photo-realistic images with enhanced resolution, surpassing the capabilities of traditional interpolation-based methods. By harnessing the power of GANs, SR-GAN is able to produce sharp, detailed, and visually appealing images that closely resemble their high-resolution counterparts.
 
+#### Implementation
+
+##### Zero-DCE Implementation
+
+# Code snippet for implementing the Zero-DCE model
+import tensorflow as tf
+from tensorflow.keras.layers import Conv2D, Activation, BatchNormalization
+from tensorflow.keras.models import Sequential
+
+# Define the Zero-DCE model architecture
+def create_zero_dce_model():
+    model = Sequential([
+        Conv2D(64, (3, 3), padding='same', input_shape=(256, 256, 3)),
+        Activation('relu'),
+        BatchNormalization(),
+        # Add more convolutional layers and activation functions as needed
+        # Example:
+        # Conv2D(64, (3, 3), padding='same'),
+        # Activation('relu'),
+        # BatchNormalization(),
+        # ...
+    ])
+    return model
+
+# Instantiate the Zero-DCE model
+zero_dce_model = create_zero_dce_model()
+##### Supewr-Resolution Implementation
+# Code snippet for implementing the Super Resolution model using CNN
+import tensorflow as tf
+from tensorflow.keras.layers import Conv2D, Activation, BatchNormalization, UpSampling2D
+from tensorflow.keras.models import Sequential
+
+# Define the Super Resolution model architecture
+def create_super_resolution_model():
+    model = Sequential([
+        Conv2D(64, (3, 3), padding='same', input_shape=(256, 256, 3)),
+        Activation('relu'),
+        BatchNormalization(),
+        # Add more convolutional layers and activation functions as needed
+        # Example:
+        # Conv2D(64, (3, 3), padding='same'),
+        # Activation('relu'),
+        # BatchNormalization(),
+        # ...
+        UpSampling2D(size=(2, 2))  # Upsampling layer for super-resolution
+    ])
+    return model
+
+# Instantiate the Super Resolution model
+super_resolution_model = create_super_resolution_model()
+
+#### Conclusion
+
+Together, these models contribute to advancing the field of image processing and computer vision, offering practical solutions for improving image quality in real-world scenarios. By leveraging deep learning techniques, they demonstrate the potential for significant enhancements in various domains, including surveillance, photography, medical imaging, and more.
+
+Incorporating these models into projects and applications can lead to improved visual outcomes and enhanced user experiences. Their flexibility, efficiency, and effectiveness make them valuable assets for researchers, developers, and practitioners seeking to tackle challenges related to image enhancement and restoration.
+
+Overall, the implementation of the Zero-DCE model and Super Resolution using CNN opens up exciting possibilities for enhancing images and unlocking new opportunities in image processing and computer vision.
+
+
 
 ## Links
 
-[link text](https://li-chongyi.github.io/Proj_Zero-DCE.html)
+[ZERO-DCE](https://li-chongyi.github.io/Proj_Zero-DCE.html)
 
-[link with title](https://pyimagesearch.com/2022/06/06/super-resolution-generative-adversarial-networks-srgan/)
+[SUPER-RESOLUTION](https://pyimagesearch.com/2022/06/06/super-resolution-generative-adversarial-networks-srgan/)
 
 
 
